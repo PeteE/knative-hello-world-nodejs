@@ -5,7 +5,7 @@ app.get('/', function (req, res) {
       console.log('Hello world received a request.');
 
       var target = process.env.TARGET || 'NOT SPECIFIED';
-      res.send('Hello world0: ' + target);
+      res.send('Hello world: ' + target);
 });
 
 var port = 8080;
