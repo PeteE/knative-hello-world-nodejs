@@ -1,8 +1,11 @@
+---
 apiVersion: serving.knative.dev/v1alpha1
 kind: Service
 metadata:
   name: helloworld-nodejs
   namespace: default
+  labels:
+    knative.dev/type: app
 spec:
   runLatest:
     configuration:
@@ -12,4 +15,4 @@ spec:
             image: docker.io/petee/helloworld-nodejs
             env:
             - name: TARGET
-              value: "rev1"
+              value: "rev5"
